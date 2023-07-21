@@ -299,7 +299,7 @@ function logOut() {
         .then(() => {
             console.log("Sign out successful");
             // Redirect to the sign-in page or any other desired destination
-            window.location.href = "../sign_in/index.html";
+            window.location.pathname = "/api/v1/login";
         })
         .catch((error) => {
             console.log("Sign out error:", error);
@@ -312,7 +312,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log(user.email.slice(0, -10));
     } else {
         document.getElementById("user").innerText = "Unknown";
-        window.location.href = "../index.html"
+        window.location.pathname = "/api/v1/signup"
         console.log("not signed in");
     }
 });

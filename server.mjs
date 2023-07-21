@@ -6,6 +6,7 @@ const app = express()
 app.use(express.json());
 
 // app.use(express.static(path.join(__dirname, './apiv1/routes/sign_up')))
+app.use("/api/v1/", express.static(path.join(__dirname, './apiv1/routes/sign_up')))
 app.use("/api/v1/login", express.static(path.join(__dirname, './apiv1/routes/sign_in')))
 app.use("/api/v1/signup", express.static(path.join(__dirname, './apiv1/routes/sign_up')))
 app.use("/api/v1/home", express.static(path.join(__dirname, './apiv1/routes/app')))

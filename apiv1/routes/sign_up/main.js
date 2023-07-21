@@ -31,7 +31,7 @@ function signUp(event) {
         .auth()
         .createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            window.location.href = "../polling-app/polling/index.html";
+            window.location.pathname = "/api/v1/home";
         })
         .catch((error) => {
             console.log(error);

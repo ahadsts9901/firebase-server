@@ -27,7 +27,7 @@ function logIn(event) {
                 text: 'Login Successfull',
                 confirmButtonColor: "#252525"
             })
-            window.location.href = "../polling/index.html";
+            window.location.pathname = "/api/v1/home";
         })
         .catch((error) => {
             console.log("Login error:", error);
